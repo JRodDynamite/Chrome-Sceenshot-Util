@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Chrome ScreenShot Util",
+  "version": "0.1",
+  "content_scripts": [
+  {
+    "matches": [
+      "<all_urls>"
+    ],
+    "js": ["html2canvas.js","jquery.js","content.js"],
+    "run_at": "document_end"
+  }
+],
+"browser_action": {
+  "default_icon": "icon.png",
+  "default_popup": "popup.html"
+},
+"background": {
+  "scripts": ["background.js"]
+},
+"permissions": [
+  "tabs", 
+  "fileSystem"
+]
+
+
+
+}
